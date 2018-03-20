@@ -1,0 +1,43 @@
+id: test_program_data_01
+label: Academic programs and associated data.
+migration_group: test_migrate_00
+migration_tags:
+  - academic program
+  - node
+# migration_dependencies:
+#   optional:
+#     - program_tags
+#     - program_image
+dependencies:
+  enforced:
+    module:
+      - test_migrate
+
+source:
+  plugin: csv
+  path: 'public://import/program/program.data.csv'
+  header_row_count: 1
+  keys:
+    - ID
+  fields:
+    ID: Unique identifier for the program as in the data source.
+    Title: Name of the program.
+    Body: A description for the program.
+    Level: Whether the program is for undergraduates or graduates.
+    Type: Whether it is a full-time or a part-time program.
+    Image file: Name of the image file associated with the program.
+    Image alt: Alternate text for the image for accessibilty.
+    Tags: Comma-separated strings to use as tags.
+    Fees: We will ignore this field as per requirement.
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: program
+
+process:
+  title: Title
+  sticky: constants/bool_0
+  promote: constants/bool_1
+  uid: constants/uid_root
+  'body/value': Body
+  'body/format': constants/restricted_html

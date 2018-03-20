@@ -10,7 +10,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function custom_migrate_module_help($route_name, RouteMatchInterface $route_match) {
+function custom_migrate_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the custom_migrate module.
     case 'help.page.custom_migrate':
@@ -26,7 +26,7 @@ function custom_migrate_module_help($route_name, RouteMatchInterface $route_matc
 /**
  * Implements hook_theme().
  */
-function custom_migrate_module_theme() {
+function custom_migrate_theme() {
   $theme = [];
 
   return $theme;

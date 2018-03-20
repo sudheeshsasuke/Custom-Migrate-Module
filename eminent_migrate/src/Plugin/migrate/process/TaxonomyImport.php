@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\custom_migrate\Plugin\migrate\process;
+namespace Drupal\eminent_migrate\Plugin\migrate\process;
 
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\ProcessPluginBase;

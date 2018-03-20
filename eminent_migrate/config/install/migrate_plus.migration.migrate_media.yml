@@ -97,4 +97,4 @@ process:
 # Required to cleanup CMI.
 dependencies:
   module:
-    - custom_migrate
+    - eminent_migrate

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\custom_migrate\Event;
+namespace Drupal\eminent_migrate\Event;
 
 use Drupal\migrate_plus\Event\MigrateEvents;
 use Drupal\migrate_plus\Event\MigratePrepareRowEvent;
@@ -53,7 +53,7 @@ class MigrateEvent implements EventSubscriberInterface {
 
     if (!empty($media_id)) {
       $message = "File " . $file_name . " already exists. aborting the import of csv item " . $id;
-      \Drupal::logger('custom_migration')->error($message);
+      \Drupal::logger('eminent_migration')->error($message);
       return FALSE;
     }
 

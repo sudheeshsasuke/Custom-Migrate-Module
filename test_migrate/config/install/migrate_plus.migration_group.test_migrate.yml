@@ -1,0 +1,8 @@
+id: test_migrate_00
+label: Custom migrations
+description: Custom data migrations.
+source_type: CSV files
+dependencies:
+  enforced:
+    module:
+      - test_migrate

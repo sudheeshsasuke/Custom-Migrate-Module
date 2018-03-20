@@ -1,6 +1,6 @@
-name: Custom Migrate
+name: Eminent Migrate
 type: module
-description: Altered version of Eminent Migrate
+description: Eminent Migrate
 core: 8.x
 package: Migration
 dependencies:

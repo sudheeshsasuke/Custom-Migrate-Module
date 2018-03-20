@@ -1,0 +1,74 @@
+id: case_studies_testing_00
+label: Case Studies Test 00.
+migration_group: test_migrate_00
+migration_tags:
+  - case studies
+  - node
+# migration_dependencies:
+#   optional:
+#     - program_tags
+#     - program_image
+dependencies:
+  enforced:
+    module:
+      - test_migrate
+
+source:
+  plugin: csv
+  delimiter: |||
+  path: 'public://import/case_studies/case_studies_testing.csv'
+  header_row_count: 1
+  keys:
+    - nid
+  fields:
+    vid: Version ID
+    uid: User ID
+    title: Title
+    log: Logs
+    status: Status
+    comment: Comment
+    promote: Promote
+    sticky: Sticky
+    vuuid: Vuuid
+    nid: Node ID
+    type: Type
+    language: Language
+    created: Created Date
+    changed: Changed Date
+    tnid: tnid
+    translate: translate
+    uuid: uuid
+    revision_timestamp: revision timestamp
+    revision_uid: revision uid
+    body: body
+    field_image: Image
+    field_project_reference: Project Reference
+    field_weight: Weight
+    title_field: title field
+    field_display_image_style_cs: Image style display
+    field_facebook_thumbnail_cs: Facebook thumbnail
+    title_original: Original title
+    rdf_mapping: RDF mapping
+    cid: cid
+    last_comment_timestamp: Last Comment timestamp
+    last_comment_name: Last Comment name
+    last_comment_uid: Last comment uid
+    comment_count: Comment count
+    domains: Domains
+    domain_site: Domain site
+    subdomains: Subdomains
+    name: Name.
+    picture: Picture
+    data: Data
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: case_studies
+
+process:
+  title: Title
+  sticky: constants/bool_0
+  promote: constants/bool_1
+  uid: constants/uid_root
+  'body/value': Body
+  'body/format': constants/restricted_html
