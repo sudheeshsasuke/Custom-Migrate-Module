@@ -1,25 +1,61 @@
+# Migration file for creating "case_studies" nodes from CSV.
+
+# Migration ID.
+#
+# Usually the ID indicates what we are trying to migrate.
+# In our case, we are migrating nodes of type "case_studies".
 id: case_studies_testing_00
+# Human-readable name of the migration for the UI.
 label: Case Studies Test 00.
+# Migration group.
+#
+# Migration groups allow us to put related migrations under one
+# umbrella so that we can execute or reference them together.
 migration_group: test_migrate_00
+# Migration tags.
+#
+# Migration tags help us group migrations using tags. For
+# example, we can tag all migrations with an "tag_name"
+# tag. That way, we can run all tag_name related migrations
+# using one command.
 migration_tags:
   - case studies
   - node
-# migration_dependencies:
-#   optional:
-#     - program_tags
-#     - program_image
+
 dependencies:
   enforced:
     module:
       - test_migrate
-
+# Source.
+#
+# Under the source, we define the key "plugin" and other
+# configurations specific to the plugin.
 source:
+  # We will be importing from a CSV file, so we will require
+  # the migrate_source_csv module which introduces the CSV
+  # source plugin with the identifier "csv".
   plugin: csv
+  # Specify the delimiter of the CSV data source. By default its ','.
   delimiter: |||
+  # Specify the path to the CSV data source.
   path: 'public://import/case_studies/case_studies_testing.csv'
+  # Number of rows at the beginning which are not actual data.
   header_row_count: 1
+  # Unique ID.
+  #
+  # These are the column names from the CSV file representing the
+  # unique identifier for each source record. These will be used
+  # by the Migration API to relate source records to migrated
+  # entities usually for an updating imported records or for performing
+  # rollbacks.
   keys:
     - nid
+  # Definitions for fields available in the source.
+  #
+  # This is an optional configuration but it makes the UI more
+  # explanatory. It is a set of key-value pairs where the key
+  # is the property name and the value is a string describing what
+  # the property is all about.
   fields:
     vid: Version ID
     uid: User ID
@@ -60,15 +96,58 @@ source:
     name: Name.
     picture: Picture
     data: Data
-
+  # Static values for the migration.
+  #
+  # We can assign hard-coded values to certain properties using constants.
+  constants:
+    bool_0: 0
+    bool_1: 1
+    uid_root: 1
+    restricted_html: restricted_html
+# Destination.
 destination:
+  # We want to import data from a CSV file.
+  # This plugin will be responsible for storing the records read during
+  # the migration in to nodes.
   plugin: 'entity:node'
+  # We specify the default node type as "case_studies" because
+  # we will only be importing nodes of type "case_studies" in this
+  # migration.
   default_bundle: case_studies
-
+# Mapping.
+#
+# We can create simple mappings without any changes to
+# source data or we can pass the source data through one or more
+# plugins before the processed value is assigned to the
+# destination.
 process:
-  title: Title
-  sticky: constants/bool_0
-  promote: constants/bool_1
-  uid: constants/uid_root
+  # Here, we make a direct assignment of the "Title" column
+  # as the node title. Not specifying a plugin name results in
+  # the usage of the plugin "get" which simply copies the source
+  # property value to the destination property.
+  title: title
+  # Same for sticky, promote and uid fields.
+  sticky: sticky
+  promote: promote
+  uid: uid
+  # Some fields have multiple properties! For example, the "body" field
+  # can have the actual full text, a summary, etc. Values can be
+  # assigned to specific properties using the syntax used below. We
+  # wrap the destination property name in quotes to comply with YAML
+  # specifications.
+  #
+  # Unfortunately, at the time of writing this code, there is no UI or
+  # drush migrate-fields-destination. Hence, one might have to refer
+  # to the structure of various field-types for determining the properties
+  # supported by various fields.
+  #
+  # Reference: https://www.drupal.org/node/2630732
   'body/value': Body
+  # We copied the text into the _value_ for the _body_ field, however,
+  # we did not specify how the text is to be treated. We do that by
+  # specifying the _format_ property of the _body_ field.
+  #
+  # In the line below we tell Drupal to treat the _body_ as full HTML.
+  # Since this value does not come from the data source, we use a constant
+  # value defined in "source".
   'body/format': constants/restricted_html
