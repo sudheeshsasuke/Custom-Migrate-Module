@@ -1,0 +1,176 @@
+user@user-To-be-filled-by-O-E-M ~/project/zi-zyxware/web2 $ drush migrate-import case_studies_testing_02
+Drupal\Core\Database\IntegrityConstraintViolationException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null: INSERT [error]
+INTO {node_field_data} (nid, vid, type, langcode, status, title, uid, created, changed, promote, sticky, default_langcode,
+revision_translation_affected) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3,
+:db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8,
+:db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array
+(
+    [:db_insert_placeholder_0] => 5085
+    [:db_insert_placeholder_1] => 14930
+    [:db_insert_placeholder_2] => case_studies
+    [:db_insert_placeholder_3] => en
+    [:db_insert_placeholder_4] => 1
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1521723534
+    [:db_insert_placeholder_8] => 1521723534
+    [:db_insert_placeholder_9] => 1
+    [:db_insert_placeholder_10] => 0
+    [:db_insert_placeholder_11] => 1
+    [:db_insert_placeholder_12] => 1
+)
+ in Drupal\Core\Database\Connection->handleQueryException() (line 683 of
+/home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Connection.php).
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null: INSERT INTO {node_field_data} (nid, vid, type, langcode, status,   [error]
+title, uid, created, changed, promote, sticky, default_langcode, revision_translation_affected) VALUES (:db_insert_placeholder_0,
+:db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5,
+:db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10,
+:db_insert_placeholder_11, :db_insert_placeholder_12); Array
+(
+    [:db_insert_placeholder_0] => 5085
+    [:db_insert_placeholder_1] => 14930
+    [:db_insert_placeholder_2] => case_studies
+    [:db_insert_placeholder_3] => en
+    [:db_insert_placeholder_4] => 1
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1521723534
+    [:db_insert_placeholder_8] => 1521723534
+    [:db_insert_placeholder_9] => 1
+    [:db_insert_placeholder_10] => 0
+    [:db_insert_placeholder_11] => 1
+    [:db_insert_placeholder_12] => 1
+)
+ (/home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)
+Drupal\Core\Database\IntegrityConstraintViolationException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null: INSERT [error]
+INTO {node_field_data} (nid, vid, type, langcode, status, title, uid, created, changed, promote, sticky, default_langcode,
+revision_translation_affected) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3,
+:db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8,
+:db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array
+(
+    [:db_insert_placeholder_0] => 5086
+    [:db_insert_placeholder_1] => 14931
+    [:db_insert_placeholder_2] => case_studies
+    [:db_insert_placeholder_3] => en
+    [:db_insert_placeholder_4] => 1
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1521723534
+    [:db_insert_placeholder_8] => 1521723534
+    [:db_insert_placeholder_9] => 1
+    [:db_insert_placeholder_10] => 0
+    [:db_insert_placeholder_11] => 1
+    [:db_insert_placeholder_12] => 1
+)
+ in Drupal\Core\Database\Connection->handleQueryException() (line 683 of
+/home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Connection.php).
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null: INSERT INTO {node_field_data} (nid, vid, type, langcode, status,   [error]
+title, uid, created, changed, promote, sticky, default_langcode, revision_translation_affected) VALUES (:db_insert_placeholder_0,
+:db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5,
+:db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10,
+:db_insert_placeholder_11, :db_insert_placeholder_12); Array
+(
+    [:db_insert_placeholder_0] => 5086
+    [:db_insert_placeholder_1] => 14931
+    [:db_insert_placeholder_2] => case_studies
+    [:db_insert_placeholder_3] => en
+    [:db_insert_placeholder_4] => 1
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1521723534
+    [:db_insert_placeholder_8] => 1521723534
+    [:db_insert_placeholder_9] => 1
+    [:db_insert_placeholder_10] => 0
+    [:db_insert_placeholder_11] => 1
+    [:db_insert_placeholder_12] => 1
+)
+ (/home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829)
+Drupal\Core\Database\IntegrityConstraintViolationException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null: INSERT [error]
+INTO {node_field_data} (nid, vid, type, langcode, status, title, uid, created, changed, promote, sticky, default_langcode,
+revision_translation_affected) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3,
+:db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8,
+:db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12); Array
+(
+    [:db_insert_placeholder_0] => 5087
+    [:db_insert_placeholder_1] => 14932
+    [:db_insert_placeholder_2] => case_studies
+    [:db_insert_placeholder_3] => en
+    [:db_insert_placeholder_4] => 1
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1521723534
+    [:db_insert_placeholder_8] => 1521723534
+    [:db_insert_placeholder_9] => 1
+    [:db_insert_placeholder_10] => 0
+    [:db_insert_placeholder_11] => 1
+    [:db_insert_placeholder_12] => 1
+)
+ in Drupal\Core\Database\Connection->handleQueryException() (line 683 of
+/home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Connection.php).
+PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'sourceid1' at row 1 in                                      [error]
+/home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Statement.php:59
+Stack trace:
+#0 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Statement.php(59): PDOStatement->execute(Array)
+#1 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Connection.php(625): Drupal\Core\Database\Statement->execute(Array, Array)
+#2 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(87): Drupal\Core\Database\Connection->query('INSERT INTO
+{mi...', Array, Array)
+#3 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Driver/mysql/Insert.php(32):
+Drupal\Core\Database\Driver\mysql\Connection->query('INSERT INTO {mi...', Array, Array)
+#4 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Query/Merge.php(371): Drupal\Core\Database\Driver\mysql\Insert->execute()
+#5 /home/user/project/zi-zyxware/web2/core/modules/migrate/src/Plugin/migrate/id_map/Sql.php(645): Drupal\Core\Database\Query\Merge->execute()
+#6 /home/user/project/zi-zyxware/web2/core/modules/migrate/src/MigrateExecutable.php(246):
+Drupal\migrate\Plugin\migrate\id_map\Sql->saveIdMapping(Object(Drupal\migrate\Row), Array, 3)
+#7 phar:///usr/local/bin/drush/includes/drush.inc(720): Drupal\migrate\MigrateExecutable->import()
+#8 phar:///usr/local/bin/drush/includes/drush.inc(711): drush_call_user_func_array(Array, Array)
+#9 /home/user/project/zi-zyxware/web2/modules/contrib/migrate_tools/migrate_tools.drush.inc(303): drush_op(Array)
+#10 [internal function]: _drush_migrate_tools_execute_migration(Object(Drupal\migrate\Plugin\Migration), 'case_studies_te...', Array)
+#11 /home/user/project/zi-zyxware/web2/modules/contrib/migrate_tools/migrate_tools.drush.inc(267): array_walk(Array, '_drush_migrate_...', Array)
+#12 phar:///usr/local/bin/drush/includes/command.inc(422): drush_migrate_tools_migrate_import('case_studies_te...')
+#13 phar:///usr/local/bin/drush/includes/command.inc(231): _drush_invoke_hooks(Array, Array)
+#14 phar:///usr/local/bin/drush/includes/command.inc(199): drush_command('case_studies_te...')
+#15 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67): drush_dispatch(Array)
+#16 phar:///usr/local/bin/drush/includes/preflight.inc(66): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#17 phar:///usr/local/bin/drush/includes/startup.inc(458): drush_main()
+#18 phar:///usr/local/bin/drush/includes/startup.inc(365): drush_run_main(false, '/', 'Phar detected. ...')
+#19 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
+#20 /usr/local/bin/drush(10): require('phar:///usr/loc...')
+#21 {main}
+
+Next Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'sourceid1' at row 1:
+INSERT INTO {migrate_map_case_studies_testing_02} (source_ids_hash, sourceid1, source_row_status, rollback_action, hash) VALUES
+(:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4); Array
+(
+    [:db_insert_placeholder_0] => 82ad02435be01bcd53d7fbae400fcb0d1fc77ec5f867627fb1787f7863be8b9c
+    [:db_insert_placeholder_1] =>
+<p>Audeze",approached,Zyxware,around,the,time,they,had,ported,from,Drupal,6,to,Drupal,7.,The,migration,was,done,by,the,time,it,reached,"us,",but,along,with,it,were,some,bug,fixes,that,needed,to,be,taken,care,of.,The,main,activity,done,on,the,site,was,making,changes,to,their,existing,e-commerce,system,and,help,them,better,their,sales,"processes.</p>
+    [:db_insert_placeholder_2] => 3
+    [:db_insert_placeholder_3] => 0
+    [:db_insert_placeholder_4] => 
+)
+ in /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Connection.php:686
+Stack trace:
+#0 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Connection.php(650):
+Drupal\Core\Database\Connection->handleQueryException(Object(PDOException), 'INSERT INTO {mi...', Array, Array)
+#1 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(87): Drupal\Core\Database\Connection->query('INSERT INTO
+{mi...', Array, Array)
+#2 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Driver/mysql/Insert.php(32):
+Drupal\Core\Database\Driver\mysql\Connection->query('INSERT INTO {mi...', Array, Array)
+#3 /home/user/project/zi-zyxware/web2/core/lib/Drupal/Core/Database/Query/Merge.php(371): Drupal\Core\Database\Driver\mysql\Insert->execute()
+#4 /home/user/project/zi-zyxware/web2/core/modules/migrate/src/Plugin/migrate/id_map/Sql.php(645): Drupal\Core\Database\Query\Merge->execute()
+#5 /home/user/project/zi-zyxware/web2/core/modules/migrate/src/MigrateExecutable.php(246):
+Drupal\migrate\Plugin\migrate\id_map\Sql->saveIdMapping(Object(Drupal\migrate\Row), Array, 3)
+#6 phar:///usr/local/bin/drush/includes/drush.inc(720): Drupal\migrate\MigrateExecutable->import()
+#7 phar:///usr/local/bin/drush/includes/drush.inc(711): drush_call_user_func_array(Array, Array)
+#8 /home/user/project/zi-zyxware/web2/modules/contrib/migrate_tools/migrate_tools.drush.inc(303): drush_op(Array)
+#9 [internal function]: _drush_migrate_tools_execute_migration(Object(Drupal\migrate\Plugin\Migration), 'case_studies_te...', Array)
+#10 /home/user/project/zi-zyxware/web2/modules/contrib/migrate_tools/migrate_tools.drush.inc(267): array_walk(Array, '_drush_migrate_...', Array)
+#11 phar:///usr/local/bin/drush/includes/command.inc(422): drush_migrate_tools_migrate_import('case_studies_te...')
+#12 phar:///usr/local/bin/drush/includes/command.inc(231): _drush_invoke_hooks(Array, Array)
+#13 phar:///usr/local/bin/drush/includes/command.inc(199): drush_command('case_studies_te...')
+#14 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67): drush_dispatch(Array)
+#15 phar:///usr/local/bin/drush/includes/preflight.inc(66): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#16 phar:///usr/local/bin/drush/includes/startup.inc(458): drush_main()
+#17 phar:///usr/local/bin/drush/includes/startup.inc(365): drush_run_main(false, '/', 'Phar detected. ...')
+#18 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
+#19 /usr/local/bin/drush(10): require('phar:///usr/loc...')
+#20 {main}
