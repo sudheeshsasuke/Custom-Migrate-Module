@@ -4,7 +4,7 @@
 #
 # Usually the ID indicates what we are trying to migrate.
 # In our case, we are migrating nodes of type "case_studies".
-id: case_studies_testing_02
+id: case_studies_testing_03
 # Human-readable name of the migration for the UI.
 label: Case Studies Test 00.
 # Migration group.
@@ -36,7 +36,7 @@ source:
   # source plugin with the identifier "csv".
   plugin: csv
   # Specify the delimiter of the CSV data source. By default its ','.
-  delimiter: '|'
+  delimiter: ','
   # Specify the path to the CSV data source.
   path: 'public://import/case_studies/case_studies_altered.csv'
   # Number of rows at the beginning which are not actual data.
@@ -68,8 +68,6 @@ source:
     changed: Lorem Ipsum
     promote: Lorem Ipsum
     sticky: Lorem Ipsum
-    default_langcode: Lorem Ipsum
-    revision_translation_affected: Lorem Ipsum
   # Static values for the migration.
   #
   # We can assign hard-coded values to certain properties using constants.
