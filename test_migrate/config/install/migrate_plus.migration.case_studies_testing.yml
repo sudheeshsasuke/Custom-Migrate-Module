@@ -4,7 +4,7 @@
 #
 # Usually the ID indicates what we are trying to migrate.
 # In our case, we are migrating nodes of type "case_studies".
-id: case_studies_testing_03
+id: case_studies_testing_00
 # Human-readable name of the migration for the UI.
 label: Case Studies Test 00.
 # Migration group.
@@ -59,15 +59,13 @@ source:
   fields:
     nid: Lorem Ipsum
     vid: Lorem Ipsum
-    type: Lorem Ipsum
-    langcode: Lorem Ipsum
-    status: Lorem Ipsum
     title: Lorem Ipsum
     uid: Lorem Ipsum
     created: Lorem Ipsum
     changed: Lorem Ipsum
     promote: Lorem Ipsum
     sticky: Lorem Ipsum
+    body: body field
   # Static values for the migration.
   #
   # We can assign hard-coded values to certain properties using constants.
@@ -99,9 +97,6 @@ process:
   # property value to the destination property.
   nid: nid
   vid: vid
-  type: type
-  langcode: langcode
-  status: status
   title: title
   uid: uid
   created: created
@@ -120,7 +115,7 @@ process:
   # supported by various fields.
   #
   # Reference: https://www.drupal.org/node/2630732
-  #'body/value': Body
+  'body/value': body
   # We copied the text into the _value_ for the _body_ field, however,
   # we did not specify how the text is to be treated. We do that by
   # specifying the _format_ property of the _body_ field.
@@ -128,4 +123,4 @@ process:
   # In the line below we tell Drupal to treat the _body_ as full HTML.
   # Since this value does not come from the data source, we use a constant
   # value defined in "source".
-  #'body/format': constants/restricted_html
+  'body/format': constants/restricted_html
