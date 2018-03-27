@@ -1,4 +1,4 @@
-id: test_migrate_00
+id: case_studies_migrate
 label: Custom migrations
 description: Custom data migrations.
 source_type: CSV files

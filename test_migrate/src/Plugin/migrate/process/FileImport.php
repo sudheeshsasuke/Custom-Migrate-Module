@@ -23,13 +23,13 @@ class FileImport extends ProcessPluginBase {
     $user = \Drupal::currentUser();
     $file = \Drupal::entityTypeManager()->getStorage('file')->create(['uri' => $value]);
 
-    // TODO :: Get properties from csv & set it for the file instance.
-    // Get uri property from csv
-    $file_uri = $row->getSourceProperty('get_the_uri_property_from_csv'); 
+    // // TODO :: Get properties from csv & set it for the file instance.
+    // // Get uri property from csv
+    // $file_uri = $row->getSourceProperty('get_the_uri_property_from_csv'); 
     
-    // Set it for the file object
-    $file->setFileUri();
-    $file->save();
+    // // Set it for the file object
+    // $file->setFileUri();
+    // $file->save();
 
     return $file->id();
   }

@@ -38,7 +38,7 @@ source:
   # Specify the delimiter of the CSV data source. By default its ','.
   delimiter: '|'
   # Specify the path to the CSV data source.
-  path: 'public://import/case_studies/case_studies_altered.csv'
+  path: 'public://import/case_studies/case_studies_required.csv'
   # Number of rows at the beginning which are not actual data.
   header_row_count: 1
   # Unique ID.
@@ -58,14 +58,41 @@ source:
   # the property is all about.
   fields:
     nid: Lorem Ipsum
-    vid: Lorem Ipsum
-    title: Lorem Ipsum
     uid: Lorem Ipsum
+    title: Lorem Ipsum
+    status: Lorem Ipsum
+    comment: Lorem Ipsum
+    type: Lorem Ipsum
     created: Lorem Ipsum
     changed: Lorem Ipsum
-    promote: Lorem Ipsum
-    sticky: Lorem Ipsum
-    body: body field
+    revision_timestamp: Lorem Ipsum
+    revision_uid: Lorem Ipsum
+    body_value: Lorem Ipsum
+    body_summary: Lorem Ipsum
+    body_format: Lorem Ipsum
+    body_safe_value: Lorem Ipsum
+    body_safe_summary: Lorem Ipsum
+    field_image_fid: Lorem Ipsum
+    field_image_uid: Lorem Ipsum
+    field_image_filename: Lorem Ipsum
+    field_image_uri: Lorem Ipsum
+    field_image_filemime: Lorem Ipsum
+    field_image_filesize: Lorem Ipsum
+    field_image_status: Lorem Ipsum
+    field_image_timestamp: Lorem Ipsum
+    field_image_alt: Lorem Ipsum Lorem Ipsum
+    field_image_title: Lorem Ipsum
+    field_image_width: Lorem Ipsum
+    field_image_height: Lorem Ipsum
+    field_weight_value: Lorem Ipsum
+    field_display_image_style_cs_value: Lorem Ipsum
+    field_facebook_thumbnail_cs_fid: Lorem Ipsum
+    field_facebook_thumbnail_cs_uid: Lorem Ipsum
+    field_facebook_thumbnail_cs_filename: Lorem Ipsum
+    field_facebook_thumbnail_cs_uri: Lorem Ipsum
+    field_facebook_thumbnail_cs_status: Lorem Ipsum
+    field_facebook_thumbnail_cs_alt: Lorem Ipsum
+    field_facebook_thumbnail_cs_title: Lorem Ipsum
   # Static values for the migration.
   #
   # We can assign hard-coded values to certain properties using constants.
@@ -115,7 +142,7 @@ process:
   # supported by various fields.
   #
   # Reference: https://www.drupal.org/node/2630732
-  'body/value': body
+  'body/value': body_value
   # We copied the text into the _value_ for the _body_ field, however,
   # we did not specify how the text is to be treated. We do that by
   # specifying the _format_ property of the _body_ field.
@@ -124,3 +151,11 @@ process:
   # Since this value does not come from the data source, we use a constant
   # value defined in "source".
   'body/format': constants/restricted_html
+  'body/summary': body_summary
+
+  # Field image
+  'field_image/target_id': field_image_fid
+  'field_image/alt': field_image_alt
+  'field_image/title': field_image_title
+  'field_image/width': field_image_width
+  'field_image/height': field_image_height
